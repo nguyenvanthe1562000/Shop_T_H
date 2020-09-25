@@ -72,10 +72,6 @@
       <Project>{ff931fd9-09ef-40df-b0ab-03ceb9a577f1}</Project>
       <Name>Shop_T_H.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shop_T_H.Web\Shop_T_H.Web.vbproj">
-      <Project>{4f252db7-3427-4704-aa12-e08462707d4f}</Project>
-      <Name>Shop_T_H.Web</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
