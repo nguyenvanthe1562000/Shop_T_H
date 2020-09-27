@@ -1,31 +1,34 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Shop_T_H.Model.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class Menu
+    [Table("Menus")]
+    public class Menu
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { set; get; }
 
-        [StringLength(250)]
-        public string Name { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string Name { set; get; }
 
-        [StringLength(250)]
-        public string URL { get; set; }
+        [Required]
+        [MaxLength(256)]
+        public string URL { set; get; }
 
-        public int? DisplayOrder { get; set; }
+        public int? DisplayOrder { set; get; }
 
-        public int? GroupID { get; set; }
+        [Required]
+        public int GroupID { set; get; }
 
-        [StringLength(50)]
-        public string Target { get; set; }
+        [ForeignKey("GroupID")]
+        public virtual MenuGroup MenuGroup { set; get; }
 
-        public bool? Status { get; set; }
+        [MaxLength(10)]
+        public string Target { set; get; }
 
-        public virtual MenuGroup MenuGroup { get; set; }
+        public bool Status { set; get; }
     }
 }

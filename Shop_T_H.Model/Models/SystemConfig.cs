@@ -1,26 +1,22 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Shop_T_H.Model.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class SystemConfig
+    [Table("SystemConfigs")]
+    public class SystemConfig
     {
         [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
+        public int ID { set; get; }
 
-        [Key]
-        [Column(Order = 1)]
-        [StringLength(500)]
-        public string Code { get; set; }
+        [Required]
+        [Column(TypeName = "varchar")]
+        [MaxLength(50)]
+        public string Code { set; get; }
 
-        [StringLength(250)]
-        public string ValueString { get; set; }
+        [MaxLength(50)]
+        public string ValueString { set; get; }
 
-        public int? ValueInt { get; set; }
+        public int? ValueInt { set; get; }
     }
 }

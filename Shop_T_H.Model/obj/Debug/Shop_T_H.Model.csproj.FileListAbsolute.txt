@@ -10,3 +10,15 @@ C:\Users\nguye\source\repos\Shop_T_H\Shop_T_H.Model\obj\Debug\Shop_T_H.Model.csp
 C:\Users\nguye\source\repos\Shop_T_H\Shop_T_H.Model\obj\Debug\Shop_T_H.Model.csproj.CopyComplete
 C:\Users\nguye\source\repos\Shop_T_H\Shop_T_H.Model\obj\Debug\Shop_T_H.Model.dll
 C:\Users\nguye\source\repos\Shop_T_H\Shop_T_H.Model\obj\Debug\Shop_T_H.Model.pdb
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\obj\Debug\Shop_T_H.Model.csprojAssemblyReference.cache
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\obj\Debug\Shop_T_H.Model.csproj.CoreCompileInputs.cache
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\obj\Debug\Shop_T_H.Model.dll
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\obj\Debug\Shop_T_H.Model.pdb
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\bin\Debug\Shop_T_H.Model.dll.config
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\bin\Debug\Shop_T_H.Model.dll
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\bin\Debug\Shop_T_H.Model.pdb
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\bin\Debug\EntityFramework.dll
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\bin\Debug\EntityFramework.xml
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nguye\source\repos\Git\Shop_T_H.Model\obj\Debug\Shop_T_H.Model.csproj.CopyComplete

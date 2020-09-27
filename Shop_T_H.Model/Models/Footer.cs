@@ -1,16 +1,16 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Shop_T_H.Model.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class Footer
+    [Table("Footers")]
+    public class Footer
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
+        [Key]
+        [MaxLength(50)]
+        public string ID { set; get; }
 
-        public string Content { get; set; }
+        [Required]
+        public string Content { set; get; }
     }
 }

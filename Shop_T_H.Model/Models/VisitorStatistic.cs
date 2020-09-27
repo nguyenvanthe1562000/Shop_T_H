@@ -1,25 +1,19 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Shop_T_H.Model.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class VisitorStatistic
+    [Table("VisitorStatistics")]
+    public class VisitorStatistic
     {
         [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
+        public Guid ID { set; get; }
 
-        [Key]
-        [Column(Order = 1, TypeName = "date")]
-        public DateTime VisitedDate { get; set; }
+        [Required]
+        public DateTime VisitedDate { set; get; }
 
-        [Key]
-        [Column(Order = 2)]
-        [StringLength(50)]
-        public string IpAddress { get; set; }
+        [MaxLength(50)]
+        public string IPAddress { set; get; }
     }
 }
