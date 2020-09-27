@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shop_T_H.Model
+namespace Shop_T_H.Model.Abstract
 {
-    public class Class1
+    public interface ISwitchable
     {
+        bool Status { get; set; }
     }
 }
