@@ -1,27 +1,25 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Shop_T_H.Model.Abstract;
+
 namespace Shop_T_H.Model.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class Page
+    [Table("Pages")]
+    public class Page : Auditable
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { set; get; }
 
-        [StringLength(500)]
-        public string Name { get; set; }
+        [Required]
+        [MaxLength(256)]
+        public string Name { set; get; }
 
-        public string Content { get; set; }
+        [Column(TypeName = "varchar")]
+        [MaxLength(256)]
+        [Required]
+        public string Alias { set; get; }
 
-        [StringLength(250)]
-        public string MetaKeyWord { get; set; }
-
-        [StringLength(250)]
-        public string MetaDescription { get; set; }
-
-        public bool Status { get; set; }
+        public string Content { set; get; }
     }
 }

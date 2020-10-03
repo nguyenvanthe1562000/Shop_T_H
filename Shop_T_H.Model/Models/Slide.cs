@@ -1,30 +1,32 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Shop_T_H.Model.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class Slide
+    [Table("Slides")]
+    public class Slide
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { set; get; }
 
-        [StringLength(250)]
-        public string Name { get; set; }
+        [Required]
+        [MaxLength(256)]
+        public string Name { set; get; }
 
-        [StringLength(500)]
-        public string URL { get; set; }
+        [MaxLength(256)]
+        public string Description { set; get; }
 
-        public int? DisplayOrder { get; set; }
+        [MaxLength(256)]
+        public string Image { set; get; }
 
-        [StringLength(250)]
-        public string Description { get; set; }
+        [MaxLength(256)]
+        public string Url { set; get; }
 
-        [StringLength(550)]
-        public string Image { get; set; }
+        public int? DisplayOrder { set; get; }
 
-        public bool? Status { get; set; }
+        public bool Status { set; get; }
+
+        public string Content { set; get; }
     }
 }
