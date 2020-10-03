@@ -28,3 +28,5 @@ C:\Users\nguye\source\repos\Git\Shop_T_H.Service\obj\Debug\Shop_T_H.Service.cspr
 C:\Users\nguye\source\repos\Git\Shop_T_H.Service\obj\Debug\Shop_T_H.Service.csproj.CopyComplete
 C:\Users\nguye\source\repos\Git\Shop_T_H.Service\obj\Debug\Shop_T_H.Service.dll
 C:\Users\nguye\source\repos\Git\Shop_T_H.Service\obj\Debug\Shop_T_H.Service.pdb
+C:\Users\nguye\source\repos\Git\Shop_T_H.Service\bin\Debug\EntityFramework.dll
+C:\Users\nguye\source\repos\Git\Shop_T_H.Service\bin\Debug\EntityFramework.xml

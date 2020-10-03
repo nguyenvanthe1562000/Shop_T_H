@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Infrastructure\DbFactory.cs" />
     <Compile Include="Infrastructure\Disposable.cs" />
     <Compile Include="Infrastructure\IDbFactory.cs" />
@@ -59,7 +58,29 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\202009271415499_initialDB.cs" />
+    <Compile Include="Migrations\202009271415499_initialDB.designer.cs">
+      <DependentUpon>202009271415499_initialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reponsitoies\FooterRepository.cs" />
+    <Compile Include="Reponsitoies\MenuGroupRepository.cs" />
+    <Compile Include="Reponsitoies\MenuRepository.cs" />
+    <Compile Include="Reponsitoies\OrderDetailRepository.cs" />
+    <Compile Include="Reponsitoies\OrderRepository.cs" />
+    <Compile Include="Reponsitoies\PageRepository.cs" />
+    <Compile Include="Reponsitoies\PostCategoryRepository.cs" />
+    <Compile Include="Reponsitoies\PostRepository.cs" />
+    <Compile Include="Reponsitoies\PostTagRepository.cs" />
+    <Compile Include="Reponsitoies\ProductCategoryRepository.cs" />
+    <Compile Include="Reponsitoies\ProductRepository.cs" />
+    <Compile Include="Reponsitoies\ProductTagRepository.cs" />
+    <Compile Include="Reponsitoies\SlideRepository.cs" />
+    <Compile Include="Reponsitoies\SupportOnlineRepository.cs" />
+    <Compile Include="Reponsitoies\SystemConfigRepository.cs" />
+    <Compile Include="Reponsitoies\TagRepository.cs" />
+    <Compile Include="Reponsitoies\VisitorStatisticRepository.cs" />
     <Compile Include="Shop_T_HDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,7 +98,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Reponsitoies\" />
+    <EmbeddedResource Include="Migrations\202009271415499_initialDB.resx">
+      <DependentUpon>202009271415499_initialDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -29,3 +29,5 @@ C:\Users\nguye\source\repos\Git\Shop_T_H.Data\bin\Debug\Shop_T_H.Model.dll.confi
 C:\Users\nguye\source\repos\Git\Shop_T_H.Data\bin\Debug\EntityFramework.xml
 C:\Users\nguye\source\repos\Git\Shop_T_H.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\nguye\source\repos\Git\Shop_T_H.Data\obj\Debug\Shop_T_H.Data.csproj.CopyComplete
+C:\Users\nguye\source\repos\Git\Shop_T_H.Data\obj\Debug\Shop_T_H.Data.Migrations.initialDB.resources
+C:\Users\nguye\source\repos\Git\Shop_T_H.Data\obj\Debug\Shop_T_H.Data.csproj.GenerateResource.cache
