@@ -64,10 +64,6 @@
       <Project>{265c9f36-fc4f-440e-99af-781570578093}</Project>
       <Name>Shop_T_H.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shop_T_H.Model\Shop_T_H.Model.csproj">
-      <Project>{bb04f8dc-0ead-432e-ac85-99d68c908261}</Project>
-      <Name>Shop_T_H.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Shop_T_H.Service\Shop_T_H.Service.csproj">
       <Project>{ff931fd9-09ef-40df-b0ab-03ceb9a577f1}</Project>
       <Name>Shop_T_H.Service</Name>
