@@ -3,7 +3,7 @@ using Shop_T_H.Data.Repositories;
 using Shop_T_H.Model.Models;
 using System.Collections.Generic;
 
-namespace TeduShop.Service
+namespace Shop_T_H.Service
 {
     public interface IPostService
     {

@@ -92,6 +92,10 @@
       <Project>{122497a9-a4d9-4e22-8e05-00a053622ad7}</Project>
       <Name>Shop_T_H.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Shop_T_H.Model\Shop_T_H.Model.csproj">
+      <Project>{bb04f8dc-0ead-432e-ac85-99d68c908261}</Project>
+      <Name>Shop_T_H.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202009271415499_initialDB.resx">
