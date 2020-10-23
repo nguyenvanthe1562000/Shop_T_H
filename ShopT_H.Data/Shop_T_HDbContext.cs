@@ -4,11 +4,12 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Shop_T_H.Model.Models;
 
 namespace Shop_T_H.Data
 {
-    public class Shop_T_HDbContext : DbContext
+    public class Shop_T_HDbContext : IdentityDbContext<ApplicationUser>
     {
         public Shop_T_HDbContext() : base("Shop_T_HConnection")
         {
@@ -37,8 +38,14 @@ namespace Shop_T_H.Data
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
         public DbSet<Error> Errors { set; get; }
 
+        public static Shop_T_HDbContext Create()
+        {
+            return new Shop_T_HDbContext();
+        }
         protected override void OnModelCreating(DbModelBuilder builder)
         {
+            builder.Entity<IdentityUserRole>().HasKey(x=>new { x.UserId, x.RoleId });
+            builder.Entity<IdentityUserLogin>().HasKey(x => x.UserId);
 
         }
     }
