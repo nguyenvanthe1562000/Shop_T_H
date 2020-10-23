@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace Shop_T_H.Web.Api
 {
-    public class ProductController : ApiControllerBase
-    {
-    }
+    //public class ProductController : ApiControllerBase
+    //{
+    //}
 }
