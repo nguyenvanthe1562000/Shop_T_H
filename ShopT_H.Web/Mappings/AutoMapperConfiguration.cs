@@ -17,6 +17,10 @@ namespace Shop_T_H.Web.Mappings
             Mapper.CreateMap<PostTag, PostTagViewModel>();
             Mapper.CreateMap<Tag, TagViewModel>();
 
+            Mapper.CreateMap<ProductCategory, ProductCategoryViewModel>();
+            Mapper.CreateMap<ProductTag, ProductTagViewModel>();
+            Mapper.CreateMap<Product, ProductViewModel>();
+
         }
     }
 }
