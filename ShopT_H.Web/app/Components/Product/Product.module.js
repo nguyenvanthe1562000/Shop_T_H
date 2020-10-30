@@ -16,5 +16,6 @@
                 templateUrl: "/app/Components/Product/ProductAddView.html",
                 controller: "ProductAddController"
             })
+           
     }
 })();

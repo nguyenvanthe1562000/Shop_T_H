@@ -2,7 +2,11 @@
 
 (function () {
     angular.module("Shop_T_H",
-        ["Shop_T_H.common","Shop_T_H.Product"])
+        ["Shop_T_H.common",
+            "Shop_T_H.ProductCategory",
+            "Shop_T_H.Product",
+            "Shop_T_H.Post"
+        ])
         .config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider','$urlMatcherFactoryProvider'];
@@ -26,7 +30,7 @@
                 controller: "LoginController"
             })
         $urlRouterProvider.otherwise("/login");
-        $urlMatcherFactoryProvider.caseInsensitive(true);
-        $locationProvider.html5Mode(true);
+        //$urlMatcherFactoryProvider.caseInsensitive(true);
+        //$locationProvider.html5Mode(true);
     }
 })();

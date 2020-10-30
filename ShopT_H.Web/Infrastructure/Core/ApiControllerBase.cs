@@ -37,7 +37,7 @@ namespace Shop_T_H.Web.Infrastructure.Core
                     }
                 }
                 LogError(ex);
-                response = requestMessage.CreateResponse(HttpStatusCode.BadRequest, ex.InnerException.Message);
+                response = requestMessage.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
             catch (DbUpdateException dbEx)
             {

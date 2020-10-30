@@ -79,7 +79,6 @@
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -197,6 +196,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Core\ApiControllerBase.cs" />
+    <Compile Include="Infrastructure\Core\PaginationSet.cs" />
     <Compile Include="Infrastructure\Extensions\EntityExtensions.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Models\PostCategoryViewModel.cs" />
@@ -215,6 +215,11 @@
     <Content Include="app\Components\Home\RootController.js" />
     <Content Include="app\Components\Login\LoginController.js" />
     <Content Include="app\Components\Login\LoginView.html" />
+    <Content Include="app\Components\ProductCategory\ProductCategory.module.js" />
+    <Content Include="app\Components\ProductCategory\ProductCategoryAddController.js" />
+    <Content Include="app\Components\ProductCategory\ProductCategoryAddView.html" />
+    <Content Include="app\Components\ProductCategory\ProductCategoryListController.js" />
+    <Content Include="app\Components\ProductCategory\ProductCategoryListView.html" />
     <Content Include="app\Components\Product\Product.module.js" />
     <Content Include="app\Components\Product\ProductAddController.js" />
     <Content Include="app\Components\Product\ProductAddView.html" />
@@ -222,13 +227,21 @@
     <Content Include="app\Components\Product\ProductEditView.html" />
     <Content Include="app\Components\Product\ProductListController.js" />
     <Content Include="app\Components\Product\ProductListView.html" />
+    <Content Include="app\Components\Post\Post.module.js" />
+    <Content Include="app\Components\Post\PostController.js" />
+    <Content Include="app\Components\Post\PostView.html" />
+    <Content Include="app\Shared\Directive\PageDirective.html" />
+    <Content Include="app\Shared\Directive\PageDirective.js" />
+    <Content Include="app\Shared\Filter\StatusFilter.js" />
     <Content Include="app\Shared\modules\Shop_T_H.common.js" />
+    <Content Include="app\Shared\Service\ApiService.js" />
+    <Content Include="app\Shared\Service\NotificationService.js" />
     <Content Include="app\Shared\View\BaseView.html" />
     <Content Include="app\Shared\View\FooterView.html" />
     <Content Include="app\Shared\View\MainMenu.html" />
     <Content Include="app\Shared\View\TopMenu.html" />
-    <Content Include="Assets\angularjs\angular-router.js" />
     <Content Include="Assets\angularjs\angular-ui-router.min.js" />
+    <Content Include="Assets\angularjs\angular.js" />
     <Content Include="Assets\angularjs\angular.min.js" />
     <Content Include="Assets\css\sb-admin-2.css" />
     <Content Include="Assets\css\sb-admin-2.min.css" />
@@ -239,6 +252,10 @@
     <Content Include="Assets\js\demo\datatables-demo.js" />
     <Content Include="Assets\js\sb-admin-2.js" />
     <Content Include="Assets\js\sb-admin-2.min.js" />
+    <Content Include="Assets\toastr\toastr.css" />
+    <Content Include="Assets\toastr\toastr.js" />
+    <Content Include="Assets\toastr\toastr.min.css" />
+    <Content Include="Assets\toastr\toastr.min.js" />
     <Content Include="Assets\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Assets\vendor\bootstrap\js\bootstrap.js" />
@@ -1896,6 +1913,8 @@
     <Content Include="Assets\vendor\jquery\jquery.min.js" />
     <Content Include="Assets\vendor\jquery\jquery.slim.js" />
     <Content Include="Assets\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -1907,7 +1926,9 @@
     </Content>
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="content\toastr.scss" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -2108,6 +2129,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Admin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\toastr.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\toastr\.bower.json" />
+    <Content Include="Assets\toastr\bower.json" />
+    <Content Include="Assets\toastr\README.md" />
+    <Content Include="Assets\toastr\toastr.js.map" />
+    <Content Include="Assets\toastr\toastr.less" />
+    <Content Include="Assets\toastr\toastr.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
