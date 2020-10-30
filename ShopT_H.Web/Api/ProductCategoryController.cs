@@ -61,6 +61,21 @@ namespace Shop_T_H.Web.Api
 
         }
 
+        [Route("getbyid/{id:int}")]
+        [HttpGet]
+        public HttpResponseMessage GetById(HttpRequestMessage request,int id)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                var model = _productCategoryService.GetById(id);
+
+                var responseData = Mapper.Map<ProductCategory, ProductCategoryViewModel>(model);
+
+                var response = request.CreateResponse(HttpStatusCode.OK, responseData);
+                return response;
+            });
+        }
+
         [Route("create")]
         [HttpPost]
         public HttpResponseMessage Create(HttpRequestMessage request, ProductCategoryViewModel productCategoryViewModel)
@@ -79,6 +94,33 @@ namespace Shop_T_H.Web.Api
                     _productCategoryService.Add(newProductCategory);
                     _productCategoryService.Save();
                     var responseData = Mapper.Map<ProductCategory, ProductCategoryViewModel>(newProductCategory);
+                    response = request.CreateResponse(HttpStatusCode.OK, responseData);
+                }
+                return response;
+            });
+        }
+
+        [Route("update")]
+        [HttpPut]
+        [AllowAnonymous]
+        public HttpResponseMessage Update(HttpRequestMessage request, ProductCategoryViewModel productCategoryViewModel)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var dbproductCategory = _productCategoryService.GetById(productCategoryViewModel.ID);
+                    dbproductCategory.UpdateProductCategory(productCategoryViewModel);
+                    dbproductCategory.UpdatedDate = DateTime.Now;
+
+                    _productCategoryService.Update(dbproductCategory);
+                    _productCategoryService.Save();
+                    var responseData = Mapper.Map<ProductCategory, ProductCategoryViewModel>(dbproductCategory);
                     response = request.CreateResponse(HttpStatusCode.OK, responseData);
                 }
                 return response;

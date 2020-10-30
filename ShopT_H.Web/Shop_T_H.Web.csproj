@@ -218,8 +218,10 @@
     <Content Include="app\Components\ProductCategory\ProductCategory.module.js" />
     <Content Include="app\Components\ProductCategory\ProductCategoryAddController.js" />
     <Content Include="app\Components\ProductCategory\ProductCategoryAddView.html" />
+    <Content Include="app\Components\ProductCategory\ProductCategoryEditView.html" />
     <Content Include="app\Components\ProductCategory\ProductCategoryListController.js" />
     <Content Include="app\Components\ProductCategory\ProductCategoryListView.html" />
+    <Content Include="app\Components\ProductCategory\ProductCategoryEditController.js" />
     <Content Include="app\Components\Product\Product.module.js" />
     <Content Include="app\Components\Product\ProductAddController.js" />
     <Content Include="app\Components\Product\ProductAddView.html" />
@@ -235,6 +237,7 @@
     <Content Include="app\Shared\Filter\StatusFilter.js" />
     <Content Include="app\Shared\modules\Shop_T_H.common.js" />
     <Content Include="app\Shared\Service\ApiService.js" />
+    <Content Include="app\Shared\Service\CommonService.js" />
     <Content Include="app\Shared\Service\NotificationService.js" />
     <Content Include="app\Shared\View\BaseView.html" />
     <Content Include="app\Shared\View\FooterView.html" />

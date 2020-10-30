@@ -17,6 +17,13 @@
                 parent: 'base',
                 templateUrl: "/app/Components/ProductCategory/ProductCategoryAddView.html",
                 controller: "ProductCategoryAddController"
-            });
+            })
+            .state("editProductCategory", {
+                url: "/editProductCategory/:id",
+                parent: 'base',
+                templateUrl: "/app/Components/ProductCategory/ProductCategoryEditView.html",
+                controller: "ProductCategoryEditController"
+            })
+            ;
     }
 })();
