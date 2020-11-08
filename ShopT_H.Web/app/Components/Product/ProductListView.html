@@ -1,1 +1,82 @@
-﻿<h2>Danh sách sản phẩm</h2>
+﻿<h3>Danh sách sản phẩm</h3>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <div class="dataTables_length" id="dataTable_length">
+                            <label>
+                                Show
+                                <select name="dataTable_length" ng-change="{{ alert($scope.pageSize)}}" ng-model="pageSize" aria-controls="dataTable" class="custom-select custom-select-sm form-control form-control-sm">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+
+
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div id="dataTable_filter" class="dataTables_filter">
+                            <label>
+                                Search:<input type="search" ng-model="keyWord" class="form-control form-control-sm" placeholder="" aria-controls="dataTable">
+                                <button ng-click="search()" class="btn btn-primary"> <i class="fas fa-search"></i> Tìm kiếm</button>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="dataTables_length" id="dataTable_length">
+                            <label>
+                                <button ui-sref="addProduct" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm mới</button>
+                                <button class="btn btn-danger" ng-click="deleteMultiple()" id="btnDelete" disabled><i class="fas fa-remove"></i> Xóa</button>
+                                  <a class="collapse-item" ui-sref="editProduct({id:1})">Thêm sản phẩm</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th rowspan="1" colspan="1"><label><input name="all" type="checkbox" ng-click="selectAll()" /></label></th>
+                                    <th rowspan="1" colspan="1">ID</th>
+                                    <th rowspan="1" colspan="1">Tên sản phẩm</th>
+                                    <th rowspan="1" colspan="1">Bí danh</th>
+                                    <th rowspan="1" colspan="1">Ngày tạo</th>
+                                    <th rowspan="1" colspan="1">Trạng thái</th>
+                                    <th rowspan="1" colspan="1">Thao tác</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr role="row" class="odd" ng-repeat="item in product">
+                                    <td><input type="checkbox" ng-model="item.checked" name="all" /></td>
+                                    <td>{{item.ID}}</td>
+                                    <td>{{item.Name}}</td>
+                                    <td>{{item.Alias}}</td>
+                                    <td>{{item.CreatedDate | date:'dd/MM/yyyy hh:mm:ss'}}</td>
+                                    <td>{{item.Status | statusFilter}}</td>
+                                    <td>
+                                        <div class=" row-cols-12">
+                                            <button class="btn btn-primary" ui-sref="editProduct({id:item.ID})"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-danger " ng-click="deleteProduct(item.ID)"><i class="fas fa-trash-alt"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <page-directive page="{{page}}" custom-path="{{customPath}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="getProduct(page)"></page-directive>
+            </div>
+        </div>
+    </div>
+</div>
+

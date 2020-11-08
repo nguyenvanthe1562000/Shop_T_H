@@ -10,11 +10,17 @@
                 templateUrl: "/app/Components/Product/ProductListView.html",
                 controller: "ProductListController"
             })
-            .state("productAdd", {
-                url: "/productAdd",
+            .state("addProduct", {
+                url: "/addProduct",
                 parent: 'base',
                 templateUrl: "/app/Components/Product/ProductAddView.html",
                 controller: "ProductAddController"
+            })
+            .state("editProduct", {
+                url: "/editProduct/:id",
+                parent: 'base',
+                templateUrl: "/app/Components/Product/ProductEditView.html",
+                controller: "ProductEditController"
             })
            
     }

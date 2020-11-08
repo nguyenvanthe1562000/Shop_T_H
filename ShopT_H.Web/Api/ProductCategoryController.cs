@@ -10,6 +10,7 @@ using Shop_T_H.Service;
 using Shop_T_H.Web.Infrastructure.Core;
 using Shop_T_H.Web.Models;
 using Shop_T_H.Web.Infrastructure.Extensions;
+using System.Web.Script.Serialization;
 
 namespace Shop_T_H.Web.Api
 {
@@ -145,6 +146,34 @@ namespace Shop_T_H.Web.Api
 
                     var responseData = Mapper.Map<ProductCategory, ProductCategoryViewModel>(oldProductCategory);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
+                }
+
+                return response;
+            });
+        }
+        [Route("deletemulti")]
+        [HttpDelete]
+        [AllowAnonymous]
+        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string listProductCategory)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var _listProductCategory = new JavaScriptSerializer().Deserialize<List<int>>(listProductCategory);
+
+                    foreach (var item in _listProductCategory)
+                    {
+                         _productCategoryService.Delete(item);
+                    }
+                    _productCategoryService.Save();
+
+                    response = request.CreateResponse(HttpStatusCode.OK, _listProductCategory.Count);
                 }
 
                 return response;
