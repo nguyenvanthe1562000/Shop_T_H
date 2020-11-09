@@ -35,7 +35,7 @@
                             <label>
                                 <button ui-sref="addProduct" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm mới</button>
                                 <button class="btn btn-danger" ng-click="deleteMultiple()" id="btnDelete" disabled><i class="fas fa-remove"></i> Xóa</button>
-                                  <a class="collapse-item" ui-sref="editProduct({id:1})">Thêm sản phẩm</a>
+                                 
                             </label>
                         </div>
                     </div>
@@ -49,6 +49,7 @@
                                     <th rowspan="1" colspan="1">ID</th>
                                     <th rowspan="1" colspan="1">Tên sản phẩm</th>
                                     <th rowspan="1" colspan="1">Bí danh</th>
+                                    <th rowspan="1" colspan="1">Hinh ảnh</th>
                                     <th rowspan="1" colspan="1">Ngày tạo</th>
                                     <th rowspan="1" colspan="1">Trạng thái</th>
                                     <th rowspan="1" colspan="1">Thao tác</th>
@@ -61,6 +62,7 @@
                                     <td>{{item.ID}}</td>
                                     <td>{{item.Name}}</td>
                                     <td>{{item.Alias}}</td>
+                                    <td> <img ng-src="{{item.Image}}" width="80" class="mr-4" /></td>
                                     <td>{{item.CreatedDate | date:'dd/MM/yyyy hh:mm:ss'}}</td>
                                     <td>{{item.Status | statusFilter}}</td>
                                     <td>
