@@ -186,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\AccountController.cs" />
+    <Compile Include="Api\HomeController.cs" />
     <Compile Include="Api\PostCategoryController.cs" />
     <Compile Include="Api\ProductCategoryController.cs" />
     <Compile Include="Api\ProductController.cs" />
@@ -243,12 +244,31 @@
     <Content Include="app\Shared\Filter\StatusFilter.js" />
     <Content Include="app\Shared\modules\Shop_T_H.common.js" />
     <Content Include="app\Shared\Service\ApiService.js" />
+    <Content Include="app\Shared\Service\AuthData.js" />
+    <Content Include="app\Shared\Service\AuthenticationService.js" />
     <Content Include="app\Shared\Service\CommonService.js" />
+    <Content Include="app\Shared\Service\LoginService.js" />
     <Content Include="app\Shared\Service\NotificationService.js" />
     <Content Include="app\Shared\View\BaseView.html" />
     <Content Include="app\Shared\View\FooterView.html" />
     <Content Include="app\Shared\View\MainMenu.html" />
     <Content Include="app\Shared\View\TopMenu.html" />
+    <Content Include="Assets\angular-loading-bar\build\loading-bar.css" />
+    <Content Include="Assets\angular-loading-bar\build\loading-bar.js" />
+    <Content Include="Assets\angular-loading-bar\build\loading-bar.min.css" />
+    <Content Include="Assets\angular-loading-bar\build\loading-bar.min.js" />
+    <Content Include="Assets\angular-loading-bar\Gruntfile.js" />
+    <Content Include="Assets\angular-loading-bar\index.js" />
+    <Content Include="Assets\angular-loading-bar\src\loading-bar.css" />
+    <Content Include="Assets\angular-loading-bar\src\loading-bar.js" />
+    <Content Include="Assets\angular-local-storage\.gitattributes" />
+    <Content Include="Assets\angular-local-storage\.gitignore" />
+    <Content Include="Assets\angular-local-storage\demo\demo-app.js" />
+    <Content Include="Assets\angular-local-storage\demo\demo-style.css" />
+    <Content Include="Assets\angular-local-storage\demo\demo.html" />
+    <Content Include="Assets\angular-local-storage\dist\angular-local-storage.js" />
+    <Content Include="Assets\angular-local-storage\dist\angular-local-storage.min.js" />
+    <Content Include="Assets\angular-local-storage\index.js" />
     <Content Include="Assets\angularjs\angular-ui-router.min.js" />
     <Content Include="Assets\angularjs\angular.js" />
     <Content Include="Assets\angularjs\angular.min.js" />
@@ -5741,6 +5761,27 @@
     <Content Include="Assets\ng-ckeditor\package.json" />
     <Content Include="Assets\ng-ckeditor\README.md" />
     <Content Include="Assets\ng-ckeditor\src\styles\ng-ckeditor.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\angular-loading-bar\.bower.json" />
+    <Content Include="Assets\angular-loading-bar\bower.json" />
+    <Content Include="Assets\angular-loading-bar\CHANGELOG.md" />
+    <Content Include="Assets\angular-loading-bar\CONTRIBUTING.md" />
+    <Content Include="Assets\angular-loading-bar\ISSUE_TEMPLATE.md" />
+    <Content Include="Assets\angular-loading-bar\LICENSE" />
+    <Content Include="Assets\angular-loading-bar\package.json" />
+    <Content Include="Assets\angular-loading-bar\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="Assets\angular-loading-bar\README.md" />
+    <Content Include="Assets\angular-local-storage\.bower.json" />
+    <Content Include="Assets\angular-local-storage\.bowerrc" />
+    <Content Include="Assets\angular-local-storage\.editorconfig" />
+    <Content Include="Assets\angular-local-storage\.travis.yml" />
+    <Content Include="Assets\angular-local-storage\bower.json" />
+    <Content Include="Assets\angular-local-storage\CHANGELOG.md" />
+    <Content Include="Assets\angular-local-storage\dist\angular-local-storage.min.js.map" />
+    <Content Include="Assets\angular-local-storage\LICENSE" />
+    <Content Include="Assets\angular-local-storage\package.json" />
+    <Content Include="Assets\angular-local-storage\README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

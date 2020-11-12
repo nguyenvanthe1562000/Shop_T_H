@@ -13,6 +13,7 @@ using Shop_T_H.Web.Infrastructure.Extensions;
 namespace Shop_T_H.Web.Api
 {
     [RoutePrefix("api/postcategory")]
+    [Authorize]
     public class PostCategoryController : ApiControllerBase
     {
         IPostCategoryService _postCategoryService;

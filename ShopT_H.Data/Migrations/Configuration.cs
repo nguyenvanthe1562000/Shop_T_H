@@ -19,32 +19,32 @@
         protected override void Seed(Shop_T_H.Data.Shop_T_HDbContext context)
         {
             CreateProductCategorySample(context);
-            //  This method will be called after migrating to the latest version.
-            //var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new Shop_T_HDbContext()));
+            //This method will be called after migrating to the latest version.
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new Shop_T_HDbContext()));
 
-            //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new Shop_T_HDbContext()));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new Shop_T_HDbContext()));
 
-            //var user = new ApplicationUser()
-            //{
-            //    UserName = "tedu",
-            //    Email = "ShopTH.international@gmail.com",
-            //    EmailConfirmed = true,
-            //    BirthDay = DateTime.Now,
-            //    FullName = "Shop The Huy"
+            var user = new ApplicationUser()
+            {
+                UserName = "shopth",
+                Email = "ShopTH.international@gmail.com",
+                EmailConfirmed = true,
+                BirthDay = DateTime.Now,
+                FullName = "Shop The Huy"
 
-            //};
+            };
 
-            //manager.Create(user, "123654$");
+            manager.Create(user, "123654$");
 
-            //if (!roleManager.Roles.Any())
-            //{
-            //    roleManager.Create(new IdentityRole { Name = "Admin" });
-            //    roleManager.Create(new IdentityRole { Name = "User" });
-            //}
+            if (!roleManager.Roles.Any())
+            {
+                roleManager.Create(new IdentityRole { Name = "Admin" });
+                roleManager.Create(new IdentityRole { Name = "User" });
+            }
 
-            //var adminUser = manager.FindByEmail("ShopTH.international@gmail.com");
+            var adminUser = manager.FindByEmail("ShopTH.international@gmail.com");
 
-            //manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
+            manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
         }
         private void CreateProductCategorySample(Shop_T_H.Data.Shop_T_HDbContext context)
         {

@@ -71,6 +71,7 @@ namespace Shop_T_H.Service
 
         public Product Delete(int id)
         {
+
             return _productRepository.Delete(id);
         }
 

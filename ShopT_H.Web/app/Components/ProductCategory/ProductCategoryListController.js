@@ -22,7 +22,7 @@
             });
             var config = {
                 params: {
-                    listProductCateogry: JSON.stringify(listId)
+                    listProductCategory: JSON.stringify(listId)
                 }
             }
             apiService.del('/api/productcategory/deletemulti', config, function (result) {
