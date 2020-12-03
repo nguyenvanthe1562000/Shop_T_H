@@ -16,8 +16,9 @@ namespace Shop_T_H.Web
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "WebHome", action = "Index", id = UrlParameter.Optional }
             );
+          
         }
     }
 }

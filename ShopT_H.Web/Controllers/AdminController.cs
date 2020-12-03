@@ -13,5 +13,9 @@ namespace Shop_T_H.Web.Controllers
         {
             return View();
         }
+        public ActionResult I2ndex()
+        {
+            return View();
+        }
     }
 }

@@ -35,18 +35,18 @@
         $scope.isAll = false;
         function selectAll() {
             if ($scope.isAll === false) {
-                angular.forEach($scope.Product, function (item) {
+                angular.forEach($scope.product, function (item) {
                     item.checked = true;
                 });
                 $scope.isAll = true;
             } else {
-                angular.forEach($scope.Product, function (item) {
+                angular.forEach($scope.product, function (item) {
                     item.checked = false;
                 });
                 $scope.isAll = false;
             }
         }
-        $scope.$watch("Product", function (n, o) {
+        $scope.$watch("product", function (n, o) {
             var checked = $filter("filter")(n, { checked: true });
             if (checked.length) {
                 $scope.selected = checked;

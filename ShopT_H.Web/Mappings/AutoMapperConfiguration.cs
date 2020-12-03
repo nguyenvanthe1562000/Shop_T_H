@@ -20,7 +20,10 @@ namespace Shop_T_H.Web.Mappings
             Mapper.CreateMap<ProductCategory, ProductCategoryViewModel>();
             Mapper.CreateMap<ProductTag, ProductTagViewModel>();
             Mapper.CreateMap<Product, ProductViewModel>();
-
+            Mapper.CreateMap<Footer, FooterViewModel>();
+            Mapper.CreateMap<Menu, MenuViewModel>();
+            Mapper.CreateMap<MenuGroup, MenuGroupViewModel>();
+            Mapper.CreateMap<Slide, SlideViewModel>();
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Shop_T_H.Service
 {
-    public interface IProductCatergoryService
+    public interface IProductCategoryService
     {
         ProductCategory Add(ProductCategory  productCategory);
 
@@ -21,14 +21,16 @@ namespace Shop_T_H.Service
 
         ProductCategory GetById(int id);
 
+
         void Save();
     }
 
-    public class ProductCatergoryService : IProductCatergoryService
+    public class ProductCatergoryService : IProductCategoryService
     {
         private IProductCategoryRepository _productCategoryRepository;
         private IUnitOfWork _unitOfWork;
 
+      
         public ProductCatergoryService(IProductCategoryRepository productCategoryRepository, IUnitOfWork unitOfWork)
         {
             this._productCategoryRepository = productCategoryRepository;

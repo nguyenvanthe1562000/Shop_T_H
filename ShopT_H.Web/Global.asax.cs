@@ -15,7 +15,6 @@ namespace Shop_T_H.Web
             GlobalConfiguration.Configure(WebApiConfig.Register);
             AutoMapperConfiguration.Configure();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }

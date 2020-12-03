@@ -22,6 +22,12 @@ namespace Shop_T_H.Service
 
         IEnumerable<Product> GetAll(string keyWord);
 
+
+        IEnumerable<Product> GetHotProduct(int top);
+
+        IEnumerable<Product> GetNewProduct(int top);
+
+        IEnumerable<Product> GetRelatedProducts(int idProductCategory,int top);
         Product GetById(int id);
 
         void Save();
@@ -82,6 +88,7 @@ namespace Shop_T_H.Service
 
         public IEnumerable<Product> GetAll(string keyWord)
         {
+
             if (!string.IsNullOrEmpty(keyWord))
                 return _productRepository.GetMulti(x => x.Name.Contains(keyWord) || x.Alias.Contains(keyWord));
             else
@@ -92,6 +99,22 @@ namespace Shop_T_H.Service
         public Product GetById(int id)
         {
             return _productRepository.GetSingleById(id);
+        }
+
+        public IEnumerable<Product> GetHotProduct(int top)
+        {
+           
+            return _productRepository.GetMulti(x => x.Status && x.HotFlag == true).OrderByDescending(x => x.CreatedDate).Take(top);
+        }
+
+        public IEnumerable<Product> GetNewProduct(int top)
+        {
+            return _productRepository.GetMulti(x => x.Status).OrderByDescending(x => x.CreatedDate).Take(top);
+        }
+
+        public IEnumerable<Product> GetRelatedProducts(int idProductCategory,int top)
+        {
+            return _productRepository.GetMulti(x => x.Status || x.CategoryID == idProductCategory).OrderByDescending(x => x.CreatedDate).Take(top);
         }
 
         public void Save()

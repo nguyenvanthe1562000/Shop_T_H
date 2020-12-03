@@ -19,8 +19,8 @@ namespace Shop_T_H.Web.Api
     [Authorize]
     public class ProductCategoryController : ApiControllerBase
     {
-        IProductCatergoryService _productCategoryService;
-        public ProductCategoryController(IErrorService errorService, IProductCatergoryService productCatergoryService) : base(errorService)
+        IProductCategoryService _productCategoryService;
+        public ProductCategoryController(IErrorService errorService, IProductCategoryService productCatergoryService) : base(errorService)
         {
             _productCategoryService = productCatergoryService;
         }

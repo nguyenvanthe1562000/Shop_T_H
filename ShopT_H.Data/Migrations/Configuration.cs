@@ -2,6 +2,7 @@
 {
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using Shop_T_H.Common;
     using Shop_T_H.Model.Models;
     using System;
     using System.Collections.Generic;
@@ -61,6 +62,13 @@
                 context.SaveChanges();
             }
 
+        }
+        private void CreateFooter(Shop_T_HDbContext context)
+        {
+            if (context.Footers.Count(x => x.ID == CommonConstants.DefaultFooterId) == 0)
+            {
+                string content = "";
+            }
         }
 
     }
